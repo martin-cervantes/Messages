@@ -11,6 +11,10 @@ This project is about creating a very simple React and Redux application. To pra
 - Redux
 - npm
 
+## :mag: Live Demo
+
+[Live Demo Link](https://mcervantes71.githup.io/Messages/index.html)
+
 
 ## :computer: Getting Started
 
