@@ -1,4 +1,4 @@
-# Magic-Books Inc
+# Messages
 
 This project is about creating a very simple React and Redux application. To practice the basics such as actions, action creator, reducers, components, props, state, store, connect dispatch, mapStateToProps, mapDispatchToProps.
 
