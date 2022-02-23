@@ -1,8 +1,6 @@
 export const ADD = 'ADD';
 
-export const addMessage = (message) => {
-  return {
-    type: ADD,
-    message: message
-  }
-};
+export const addMessage = (message) => ({
+  type: ADD,
+  message
+});

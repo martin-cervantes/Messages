@@ -7,7 +7,7 @@ class Presentational extends React.Component {
     super(props);
     this.state = {
       input: ''
-    }
+    };
     this.handleChange = this.handleChange.bind(this);
     this.submitMessage = this.submitMessage.bind(this);
   }
@@ -20,37 +20,32 @@ class Presentational extends React.Component {
 
   submitMessage() {
     this.props.submitNewMessage(this.state.input);
-    this.setState((state) => ({ input: '' }));
+    this.setState({ input: '' });
   }
 
   render() {
     return (
       <div>
         <h2>Type in a new Message:</h2>
-        <input value={this.state.input} onChange={this.handleChange}/>
-        <br/>
+        <input value={this.state.input} onChange={this.handleChange} />
+        <br />
         <button onClick={this.submitMessage}>Submit</button>
         <ul>
-          {this.props.messages.map( (message, idx) => {
-              return (<li key={idx}>{message}</li>)
-            })
-          }
+          { this.props.messages.map((message, idx) => (<li key={idx}>{message}</li>)) }
         </ul>
       </div>
     );
   }
-};
+}
 
-const mapStateToProps = (state) => {
-  return {messages: state}
-};
+const mapStateToProps = (state) => ({
+  messages: state
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    submitNewMessage: (message) => {
-      dispatch(addMessage(message))
-    }
+const mapDispatchToProps = (dispatch) => ({
+  submitNewMessage: (message) => {
+    dispatch(addMessage(message));
   }
-};
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Presentational);
